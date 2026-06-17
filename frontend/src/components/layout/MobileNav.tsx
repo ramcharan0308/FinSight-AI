@@ -6,9 +6,8 @@ import {
   X,
   LayoutDashboard,
   Receipt,
-  PiggyBank,
-  MessageSquare,
-  Settings,
+  Wallet,
+  SlidersHorizontal,
   LogOut,
   TrendingUp,
   Sparkles,
@@ -26,9 +25,9 @@ interface MobileNavProps {
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
   { name: 'Transactions', href: '/transactions', icon: Receipt },
-  { name: 'Budgets', href: '/budgets', icon: PiggyBank },
-  { name: 'AI Chat', href: '/chat', icon: MessageSquare },
-  { name: 'Settings', href: '/settings', icon: Settings },
+  { name: 'Budgets', href: '/budgets', icon: Wallet },
+  { name: 'AI Advisor', href: '/chat', icon: Sparkles },
+  { name: 'Settings', href: '/settings', icon: SlidersHorizontal },
 ];
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
@@ -76,7 +75,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* Drawer header with brand + close button */}
         <div className="flex items-center justify-between px-5 pt-5 pb-3 flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 flex-shrink-0">
+            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-sm flex-shrink-0">
               <TrendingUp className="w-5 h-5 stroke-[2.2]" />
             </div>
             <div>
@@ -130,7 +129,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 className={cn(
                   'group flex items-center px-4 py-3.5 text-sm font-semibold rounded-xl transition-all duration-200',
                   isActive
-                    ? 'bg-gradient-to-r from-indigo-500/10 to-indigo-500/5 text-indigo-650 dark:text-indigo-450 border-l-4 border-indigo-600'
+                    ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border-l-2 border-indigo-600 dark:border-indigo-400 shadow-sm'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/40 hover:text-slate-800 dark:hover:text-white',
                 )}
               >
@@ -138,7 +137,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   className={cn(
                     'mr-3 h-5 w-5 flex-shrink-0',
                     isActive
-                      ? 'text-indigo-500'
+                      ? 'text-indigo-600 dark:text-indigo-400'
                       : 'text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300',
                   )}
                 />

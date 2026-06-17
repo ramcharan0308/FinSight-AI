@@ -94,15 +94,15 @@ export default function LoginPage() {
       </div>
 
       {/* ── Demo Card ──────────────────────────────────────────── */}
-      <div className="relative mb-5 overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/[0.07] via-transparent to-indigo-500/[0.03] p-5">
+      <div className="relative mb-5 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 p-5">
         {/* Decorative watermark */}
-        <div className="pointer-events-none absolute right-4 top-4 opacity-[0.055]">
-          <LayoutDashboard className="h-14 w-14 text-indigo-500 dark:text-indigo-400" />
+        <div className="pointer-events-none absolute right-4 top-4 opacity-[0.03] dark:opacity-[0.05]">
+          <LayoutDashboard className="h-14 w-14 text-slate-200 dark:text-slate-800" />
         </div>
 
         {/* Header row: icon + label + tags */}
         <div className="mb-3 flex items-start gap-3">
-          <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-650 dark:text-indigo-400">
+          <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">
             <PlayCircle className="h-3.5 w-3.5" />
           </div>
           <div className="min-w-0 flex-1">
@@ -111,10 +111,10 @@ export default function LoginPage() {
                 Explore Demo Data
               </span>
               <div className="flex flex-wrap gap-1.5">
-                {['Transactions', 'Budgets', 'Analytics', 'AI Insights', 'AI Chat'].map((tag) => (
+                {['Transactions', 'Budgets', 'Analytics', 'AI Advisor'].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2 py-0.5 text-[9.5px] font-semibold text-indigo-650 dark:text-indigo-400"
+                    className="rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 text-[9.5px] font-semibold text-slate-700 dark:text-slate-300"
                   >
                     {tag}
                   </span>
@@ -131,7 +131,7 @@ export default function LoginPage() {
         {/* Credentials row + CTA — horizontal */}
         <div className="flex items-center gap-2.5">
           {/* Email chip */}
-          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-slate-200/70 bg-white/80 px-3 py-2.5 dark:border-slate-700/40 dark:bg-slate-900/60">
+          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2.5 dark:border-slate-800 dark:bg-slate-950">
             <Mail className="h-3.5 w-3.5 flex-shrink-0 text-slate-400" />
             <span className="min-w-0 flex-1 select-all truncate font-mono text-[11.5px] font-semibold text-slate-700 dark:text-slate-200">
               {DEMO_EMAIL}
@@ -159,7 +159,7 @@ export default function LoginPage() {
           </div>
 
           {/* Password chip */}
-          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-slate-200/70 bg-white/80 px-3 py-2.5 dark:border-slate-700/40 dark:bg-slate-900/60">
+          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2.5 dark:border-slate-800 dark:bg-slate-950">
             <Lock className="h-3.5 w-3.5 flex-shrink-0 text-slate-400" />
             <span className="min-w-0 flex-1 select-all truncate font-mono text-[11.5px] font-semibold text-slate-700 dark:text-slate-200">
               {DEMO_PASSWORD}
@@ -190,7 +190,7 @@ export default function LoginPage() {
           <button
             type="button"
             onClick={handleExplorDemo}
-            className="flex flex-shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-4 py-2.5 text-[10.5px] font-black uppercase tracking-widest text-white shadow-md shadow-indigo-650/15 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-600/20 active:scale-[0.97]"
+            className="flex flex-shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-xl bg-indigo-600 px-4 py-2.5 text-[10.5px] font-black uppercase tracking-widest text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 active:scale-[0.97]"
           >
             <PlayCircle className="h-3.5 w-3.5" />
             Explore Demo
@@ -211,7 +211,7 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         {/* Demo prefilled notice */}
         {demoPrefilled && !errorMessage && (
-          <div className="flex items-start gap-3 rounded-2xl border border-indigo-500/25 bg-indigo-500/[0.07] px-4 py-3 animate-fadeIn">
+          <div className="flex items-start gap-3 rounded-2xl border border-indigo-200 bg-indigo-50/50 dark:border-indigo-900/30 dark:bg-indigo-950/20 px-4 py-3 animate-fadeIn">
             <PlayCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-indigo-600 dark:text-indigo-400" />
             <p className="text-xs font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
               Demo credentials filled in. Click{' '}
@@ -292,7 +292,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={isLoggingIn}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-indigo-500/10 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/15 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100"
         >
           {isLoggingIn ? (
             <>
@@ -313,7 +313,7 @@ export default function LoginPage() {
         New to FinSight AI?{' '}
         <Link
           href="/register"
-          className="font-bold text-indigo-600 dark:text-indigo-400 underline decoration-indigo-500/30 underline-offset-4 transition-colors hover:text-indigo-750 dark:hover:text-indigo-350 hover:decoration-indigo-500"
+          className="font-bold text-indigo-600 dark:text-indigo-400 underline decoration-indigo-500/30 underline-offset-4 transition-colors hover:text-indigo-700 dark:hover:text-indigo-300 hover:decoration-indigo-500"
         >
           Create an account
         </Link>

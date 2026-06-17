@@ -143,7 +143,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={isRegistering}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-indigo-500/10 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/15 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
             >
               {isRegistering ? (
                 <>
@@ -164,7 +164,7 @@ export default function RegisterPage() {
           Already registered?{' '}
           <Link
             href="/login"
-            className="text-indigo-650 dark:text-indigo-400 hover:text-indigo-750 dark:hover:text-indigo-350 transition-colors font-bold underline underline-offset-4 decoration-indigo-500/30 hover:decoration-indigo-500"
+            className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-350 transition-colors font-bold underline underline-offset-4 decoration-indigo-500/30 hover:decoration-indigo-500"
           >
             Sign in here
           </Link>

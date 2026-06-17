@@ -8,12 +8,11 @@ import { useUIStore } from '@/store/ui-store';
 import {
   LayoutDashboard,
   Receipt,
-  PiggyBank,
-  MessageSquare,
-  Settings,
+  Wallet,
+  Sparkles,
+  SlidersHorizontal,
   LogOut,
   TrendingUp,
-  Sparkles,
   PanelLeftClose,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -23,9 +22,9 @@ import React, { useEffect, useState } from 'react';
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
   { name: 'Transactions', href: '/transactions', icon: Receipt },
-  { name: 'Budgets', href: '/budgets', icon: PiggyBank },
-  { name: 'AI Chat', href: '/chat', icon: MessageSquare },
-  { name: 'Settings', href: '/settings', icon: Settings },
+  { name: 'Budgets', href: '/budgets', icon: Wallet },
+  { name: 'AI Advisor', href: '/chat', icon: Sparkles },
+  { name: 'Settings', href: '/settings', icon: SlidersHorizontal },
 ];
 
 export function Sidebar() {
@@ -75,7 +74,7 @@ export function Sidebar() {
                     setHoveredRect(null);
                     toggleSidebar();
                   }}
-                  className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex-shrink-0"
+                  className="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-sm hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex-shrink-0"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setHoveredRect({
@@ -101,7 +100,7 @@ export function Sidebar() {
                   href="/"
                   className="flex items-center gap-3 min-w-0 overflow-hidden group/brand"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 group-hover/brand:scale-105 transition-all duration-300 flex-shrink-0">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-600 text-white shadow-sm group-hover/brand:scale-105 transition-all duration-300 flex-shrink-0">
                     <TrendingUp className="w-5.5 h-5.5 stroke-[2.5]" />
                   </div>
                   <div className="animate-fadeIn overflow-hidden whitespace-nowrap min-w-0">

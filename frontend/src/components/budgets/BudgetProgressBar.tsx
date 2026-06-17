@@ -19,11 +19,7 @@ export function BudgetProgressBar({ spent, limit }: BudgetProgressBarProps) {
       <div className="relative w-full h-3 rounded-full bg-slate-100 dark:bg-slate-800/80 overflow-hidden shadow-inner">
         <div
           className={`h-full rounded-full transition-all duration-500 ${
-            percentage > 100
-              ? 'bg-gradient-to-r from-rose-500 to-red-650 shadow-[0_0_10px_rgba(239,68,68,0.2)]'
-              : percentage > 80
-                ? 'bg-gradient-to-r from-amber-400 to-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.2)]'
-                : 'bg-gradient-to-r from-emerald-400 to-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.2)]'
+            percentage > 100 ? 'bg-rose-500' : percentage > 80 ? 'bg-amber-500' : 'bg-emerald-500'
           }`}
           style={{ width: `${progress}%` }}
         />

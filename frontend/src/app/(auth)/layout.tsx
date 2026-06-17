@@ -9,7 +9,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <div className="w-full">
           {/* Logo */}
           <div className="mb-9 flex items-center gap-3 group select-none">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-indigo-650 via-indigo-500 to-indigo-400 bg-indigo-600 text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-all duration-300">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm group-hover:scale-105 transition-all duration-300">
               <TrendingUp className="h-5 w-5 stroke-[2.2]" />
             </div>
             <div>
@@ -27,22 +27,22 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       </div>
 
       {/* ── Right: Hero / Marketing Panel ─────────────────────── */}
-      <div className="hidden lg:flex relative bg-slate-950 overflow-hidden flex-col">
+      <div className="hidden lg:flex relative bg-slate-50 dark:bg-slate-950/40 border-l border-slate-200/50 dark:border-none overflow-hidden flex-col transition-colors duration-300">
         {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 dark:opacity-30" />
 
         {/* Gradient mesh */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-slate-950 via-slate-950 to-indigo-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 via-slate-100 to-indigo-50/20 dark:from-slate-950 dark:via-slate-950 dark:to-indigo-950/40" />
 
-        {/* Ambient glows */}
-        <div className="absolute top-1/3 right-1/3 w-[420px] h-[420px] rounded-full bg-indigo-500/6 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-indigo-500/4 blur-[80px] pointer-events-none" />
+        {/* Ambient glows (very subtle in light mode, moderate in dark mode) */}
+        <div className="absolute top-1/3 right-1/3 w-[420px] h-[420px] rounded-full bg-indigo-500/[0.03] dark:bg-indigo-500/6 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-indigo-500/[0.02] dark:bg-indigo-500/4 blur-[80px] pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-between h-full p-12 xl:p-16">
           {/* Top badge */}
           <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-400/20 bg-indigo-400/10 px-3 py-1 text-xs font-semibold text-indigo-400 backdrop-blur-sm select-none">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-200/60 dark:border-indigo-400/20 bg-indigo-50/50 dark:bg-indigo-400/10 px-3 py-1 text-xs font-semibold text-indigo-600 dark:text-indigo-400 backdrop-blur-sm select-none">
               <Sparkles className="h-3.5 w-3.5" />
               Next-gen Intelligence Platform
             </span>
@@ -50,14 +50,14 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
           {/* Main hero copy */}
           <div className="space-y-5">
-            <h2 className="font-sans text-4xl font-extrabold leading-[1.12] tracking-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.2)] xl:text-[2.6rem]">
+            <h2 className="font-sans text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-950 dark:text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.05)] dark:[text-shadow:0_2px_12px_rgba(0,0,0,0.2)] xl:text-[2.6rem]">
               Intelligent wealth
               <br />
-              <span className="bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-650 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300 bg-clip-text text-transparent">
                 intelligence.
               </span>
             </h2>
-            <p className="max-w-sm text-base font-medium leading-relaxed text-slate-400">
+            <p className="max-w-sm text-base font-medium leading-relaxed text-slate-650 dark:text-slate-400">
               Consolidate ledger entries, track categories dynamically, and chat with your
               personalized AI wealth advisor in one streamlined cockpit.
             </p>
@@ -67,37 +67,35 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
               {[
                 {
                   icon: ShieldCheck,
-                  color: 'text-indigo-400',
                   title: 'Bank-grade Security',
                   desc: 'Encrypted transaction streams.',
                 },
                 {
                   icon: Zap,
-                  color: 'text-indigo-400',
                   title: 'Real-time Budgeting',
                   desc: 'Automated warning thresholds.',
                 },
                 {
                   icon: BarChart3,
-                  color: 'text-indigo-400',
                   title: 'Smart Analytics',
                   desc: 'Category breakdown & trends.',
                 },
                 {
                   icon: Brain,
-                  color: 'text-indigo-400',
                   title: 'AI Financial Advisor',
                   desc: 'Contextual Groq-powered chat.',
                 },
-              ].map(({ icon: Icon, color, title, desc }) => (
+              ].map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="flex items-start gap-2.5 rounded-2xl border border-white/5 bg-white/4 p-3 backdrop-blur-sm"
+                  className="flex items-start gap-3 rounded-2xl border border-slate-200/60 dark:border-slate-800 bg-white dark:bg-slate-900 p-3.5 shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200"
                 >
-                  <Icon className={`mt-0.5 h-4 w-4 flex-shrink-0 ${color}`} />
+                  <Icon className="mt-0.5 h-4.5 w-4.5 flex-shrink-0 text-indigo-600 dark:text-indigo-400" />
                   <div>
-                    <h4 className="text-sm font-bold leading-snug text-white">{title}</h4>
-                    <p className="mt-0.5 text-xs text-slate-500">{desc}</p>
+                    <h4 className="text-sm font-bold leading-snug text-slate-900 dark:text-white">
+                      {title}
+                    </h4>
+                    <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -105,7 +103,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           </div>
 
           {/* Footer */}
-          <div className="border-t border-white/5 pt-6 text-xs font-semibold text-slate-600">
+          <div className="border-t border-slate-200/60 dark:border-white/5 pt-6 text-xs font-semibold text-slate-400 dark:text-slate-600">
             FinSight AI — Version 1.2.0
           </div>
         </div>

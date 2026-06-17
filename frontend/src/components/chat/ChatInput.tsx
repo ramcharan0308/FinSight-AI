@@ -43,7 +43,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
         className={cn(
           'flex items-center justify-center px-4 rounded-2xl text-white transition-all shadow-md',
           text.trim() && !disabled
-            ? 'bg-gradient-to-r from-indigo-650 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 shadow-indigo-650/10 active:scale-[0.98]'
+            ? 'bg-indigo-600 hover:bg-indigo-700 shadow-sm active:scale-[0.98]'
             : 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-600 shadow-none cursor-not-allowed',
         )}
       >

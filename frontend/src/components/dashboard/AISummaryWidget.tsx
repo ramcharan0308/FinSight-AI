@@ -25,13 +25,10 @@ export function AISummaryWidget() {
   };
 
   return (
-    <div className="p-6 rounded-3xl border border-indigo-500/25 dark:border-indigo-500/20 bg-gradient-to-br from-indigo-500/[0.03] to-indigo-600/[0.03] dark:from-indigo-950/5 dark:to-indigo-950/5 relative overflow-hidden select-none">
-      {/* Background ambient glow */}
-      <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
-
+    <div className="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 relative overflow-hidden select-none">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 shadow-sm animate-pulse">
+          <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700 shadow-sm">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
@@ -47,7 +44,7 @@ export function AISummaryWidget() {
         {!isGeneratingSummary && (
           <button
             onClick={handleFetchSummary}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 text-white text-xs font-bold transition-all shadow-md shadow-indigo-650/10 hover:shadow-indigo-600/15"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all shadow-sm"
           >
             {summary ? (
               <>

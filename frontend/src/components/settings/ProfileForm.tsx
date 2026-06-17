@@ -164,7 +164,7 @@ export function ProfileForm() {
         <button
           type="submit"
           disabled={!isDirty || isUpdatingProfile}
-          className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-indigo-650 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 rounded-xl transition-all shadow-md shadow-indigo-500/10 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isUpdatingProfile && <Loader2 className="w-4 h-4 animate-spin" />}
           Save Settings
