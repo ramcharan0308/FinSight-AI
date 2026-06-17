@@ -410,25 +410,25 @@ The application is fully configured for cloud deployment with continuous integra
 ## Application Screenshots
 
 ### Login Experience
-![Login Experience](docs/screenshots/login-page.png)
+![Login Experience](docs/screenshots/login-page-v2.png)
 
 ### Financial Dashboard
-![Financial Dashboard](docs/screenshots/dashboard-overview.png)
+![Financial Dashboard](docs/screenshots/dashboard-overview-v2.png)
 
 ### Transactions Management
-![Transactions Management](docs/screenshots/transactions-page.png)
+![Transactions Management](docs/screenshots/transactions-page-v2.png)
 
 ### Budget Planning
-![Budget Planning](docs/screenshots/budgets-page.png)
+![Budget Planning](docs/screenshots/budgets-page-v2.png)
 
 ### AI Financial Advisor
-![AI Financial Advisor](docs/screenshots/ai-advisor-page.png)
+![AI Financial Advisor](docs/screenshots/ai-advisor-page-v2.png)
 
 ### Light Theme
-![Light Theme](docs/screenshots/dashboard-light-theme.png)
+![Light Theme](docs/screenshots/dashboard-light-theme-v2.png)
 
 ### Dark Theme
-![Dark Theme](docs/screenshots/dashboard-dark-theme.png)
+![Dark Theme](docs/screenshots/dashboard-dark-theme-v2.png)
 
 ---
 
