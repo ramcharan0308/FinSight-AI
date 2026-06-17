@@ -5,26 +5,32 @@
 
 ---
 
+## 🚀 Live Production & Interactive Docs
+- **Frontend Live App:** [https://finsight-ai-nu.vercel.app](https://finsight-ai-nu.vercel.app)
+- **Backend API Docs (Swagger):** [https://finsight-ai-pz69.onrender.com/api/docs](https://finsight-ai-pz69.onrender.com/api/docs)
+- **Backend Health Check:** [https://finsight-ai-pz69.onrender.com/api/health](https://finsight-ai-pz69.onrender.com/api/health)
+
+---
+
 ## 🔐 Step 1 — Instant Login with Demo Account
 
-Navigate to: **[http://localhost:3000/login](http://localhost:3000/login)**
+Navigate to: **[https://finsight-ai-nu.vercel.app/login](https://finsight-ai-nu.vercel.app/login)** (or `http://localhost:3000/login` if running locally)
 
-The login page includes a **Demo Account panel** with:
-- A **"Use Demo Account"** button that auto-fills credentials with one click
-- Individual **Copy Email** / **Copy Password** buttons
+The login page includes an **"Explore Demo"** card with:
+- A single-click **"EXPLORE DEMO"** button that auto-fills credentials and signs you in instantly.
+- Clear copyable credential displays.
 
 | Field    | Value               |
 |:---------|:--------------------|
 | Email    | `test@finsight.ai`  |
 | Password | `Test@123456`       |
 
-> This account is pre-seeded with 35+ realistic transactions, 5 budget configurations, and full analytics data across April–June 2026.
-
----
+> This account is pre-seeded with **35 realistic transactions (70 total database transactions)**, **5 budget configurations (10 total database budgets)**, and full analytics data across the April–June 2026 period.
 
 ## 📊 Step 2 — Dashboard
 
-URL: **[http://localhost:3000/](http://localhost:3000/)**
+* **Live Production URL:** **[https://finsight-ai-nu.vercel.app/](https://finsight-ai-nu.vercel.app/)**
+* **Local Alternative:** `http://localhost:3000/`
 
 **What to evaluate:**
 - ✅ **Stats Cards** — Total Income, Total Expenses, Net Savings (with month-over-month % change)
@@ -39,10 +45,11 @@ URL: **[http://localhost:3000/](http://localhost:3000/)**
 
 ## 💳 Step 3 — Transactions
 
-URL: **[http://localhost:3000/transactions](http://localhost:3000/transactions)**
+* **Live Production URL:** **[https://finsight-ai-nu.vercel.app/transactions](https://finsight-ai-nu.vercel.app/transactions)**
+* **Local Alternative:** `http://localhost:3000/transactions`
 
 **What to evaluate:**
-- ✅ Paginated transactions table (35+ entries across 3 months)
+- ✅ Paginated transactions table (35+ entries per account across 3 months, 70 total in database)
 - ✅ Filters: search by date range, category, transaction type (income/expense)
 - ✅ Create new transaction via **"Add Transaction"** button
 - ✅ Inline edit and delete with confirm dialog
@@ -53,7 +60,8 @@ URL: **[http://localhost:3000/transactions](http://localhost:3000/transactions)*
 
 ## 🎯 Step 4 — Budgets
 
-URL: **[http://localhost:3000/budgets](http://localhost:3000/budgets)**
+* **Live Production URL:** **[https://finsight-ai-nu.vercel.app/budgets](https://finsight-ai-nu.vercel.app/budgets)**
+* **Local Alternative:** `http://localhost:3000/budgets`
 
 **What to evaluate:**
 - ✅ 5 pre-configured budgets: Groceries ($500), Dining Out ($300), Transport ($200), Utilities ($150), Entertainment ($250)
@@ -66,10 +74,11 @@ URL: **[http://localhost:3000/budgets](http://localhost:3000/budgets)**
 
 ## 🤖 Step 5 — AI Chat
 
-URL: **[http://localhost:3000/chat](http://localhost:3000/chat)**
+* **Live Production URL:** **[https://finsight-ai-nu.vercel.app/chat](https://finsight-ai-nu.vercel.app/chat)**
+* **Local Alternative:** `http://localhost:3000/chat`
 
 **What to evaluate:**
-- ✅ **Groq AI** (Llama-3.3-70b) powered chat assistant
+- ✅ **Groq AI** (Llama-3.3-70b) powered chat assistant configured via OpenAI SDK
 - ✅ Suggested question prompts to get started immediately:
   - *"How much did I spend this month?"*
   - *"Am I on track for my groceries budget?"*
@@ -83,7 +92,8 @@ URL: **[http://localhost:3000/chat](http://localhost:3000/chat)**
 
 ## ⚙️ Step 6 — Settings
 
-URL: **[http://localhost:3000/settings](http://localhost:3000/settings)**
+* **Live Production URL:** **[https://finsight-ai-nu.vercel.app/settings](https://finsight-ai-nu.vercel.app/settings)**
+* **Local Alternative:** `http://localhost:3000/settings`
 
 **What to evaluate:**
 - ✅ Profile update form (name, email)
@@ -94,7 +104,8 @@ URL: **[http://localhost:3000/settings](http://localhost:3000/settings)**
 
 ## 📡 Step 7 — Swagger API Docs
 
-URL: **[http://localhost:5000/api/docs](http://localhost:5000/api/docs)**
+* **Live Production URL:** **[https://finsight-ai-pz69.onrender.com/api/docs](https://finsight-ai-pz69.onrender.com/api/docs)**
+* **Local Alternative:** `http://localhost:5000/api/docs`
 
 **What to evaluate:**
 - ✅ All REST endpoints are documented with request/response schemas
@@ -114,7 +125,7 @@ URL: **[http://localhost:5000/api/docs](http://localhost:5000/api/docs)**
 | State Management | Zustand (client), TanStack React Query v5 (server) |
 | Charts | Recharts (lazy-loaded via `next/dynamic`) |
 | Backend | Node.js, Express.js, TypeScript |
-| Database | PostgreSQL 16 (Docker), Prisma ORM |
+| Database | PostgreSQL (Neon Serverless for production, Docker for local development), Prisma ORM |
 | AI Engine | Groq API — Llama-3.3-70b-versatile |
 | Auth | JWT (15m access tokens), bcryptjs (10 salt rounds) |
 | API Docs | OpenAPI/Swagger at `/api/docs` |

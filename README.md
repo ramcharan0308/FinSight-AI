@@ -13,22 +13,30 @@ FinSight AI is a production-grade, AI-powered personal finance and expense intel
 
 ---
 
-## Demo Account
+## 🚀 Live Production URLS
 
-Visitors can explore the platform using a pre-configured account:
+* **Frontend Live App:** [https://finsight-ai-nu.vercel.app](https://finsight-ai-nu.vercel.app)
+* **Backend Production API Gateway:** [https://finsight-ai-pz69.onrender.com/api/v1](https://finsight-ai-pz69.onrender.com/api/v1)
+* **Interactive API Documentation (Swagger):** [https://finsight-ai-pz69.onrender.com/api/docs](https://finsight-ai-pz69.onrender.com/api/docs)
+* **Backend API Health Endpoint:** [https://finsight-ai-pz69.onrender.com/api/health](https://finsight-ai-pz69.onrender.com/api/health)
 
-**Email:** `test@finsight.ai`
-**Password:** `Test@123456`
+---
 
-This account includes:
+## 🔐 Explore Demo Data
 
-- Sample transactions
-- Budget configurations
-- Financial analytics
-- AI-generated summaries
-- AI chatbot data
+Evaluate the application instantly using our pre-configured, data-rich recruiter account:
 
-> The login page includes an **Explore Demo** button that auto-fills these credentials instantly.
+* **Email:** `test@finsight.ai`
+* **Password:** `Test@123456`
+
+This account contains pre-populated, realistic sandboxed data matching the active financial quarter (April–June 2026):
+* **3 Registered Users** (Admin, User, Test)
+* **11 Core Category Definitions** (Groceries, Salary, Rent, Utilities, Dining Out, Transport, Entertainment, etc.)
+* **10 Active Budgets** (Limit configurations & progress tracking metrics)
+* **70 Multi-Month Transactions** (Realistic ledger records representing normal personal cashflow)
+* **Personalized AI Financial Summary Reports** & chat conversation context
+
+> The login page includes an **"Explore Demo"** card that auto-fills these credentials with a single click.
 
 ---
 
@@ -388,10 +396,14 @@ The client dashboard will start at `http://localhost:3000`.
 
 ## 8. Deployment Architecture (Production)
 
-* **Frontend:** Hosted on **Vercel** with CDN optimization.
-* **Backend:** Hosted on **Railway** (or Render) connected to a managed database.
-* **Database:** Managed **PostgreSQL** (e.g. hosted on Supabase or Railway).
-* **AI Capabilities:** Connected directly to the **Groq API** endpoint.
+The application is fully configured for cloud deployment with continuous integration:
+
+* **Frontend:** Hosted on **Vercel** ([https://finsight-ai-nu.vercel.app](https://finsight-ai-nu.vercel.app)), utilizing server-side routing overlays and optimized static bundle serving.
+* **Backend:** Hosted on **Render** as a Web Service ([https://finsight-ai-pz69.onrender.com](https://finsight-ai-pz69.onrender.com)), automatically scaling web threads.
+  * **Build Command:** `npm install --include=dev && npx prisma generate && npm run build`
+  * **Start Command:** `npx prisma migrate deploy && npm start`
+* **Database:** Serverless **Neon PostgreSQL** connected via secure pooling URI parameters.
+* **AI Integration:** Communicates with the **Groq API** service using the OpenAI Node SDK configuration mapped to Groq endpoint hosts.
 
 ---
 

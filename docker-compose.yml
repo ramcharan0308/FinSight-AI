@@ -1,9 +1,18 @@
+# =========================================================================
+# FINSIGHT AI DOCKER COMPOSE CONFIGURATION
+# =========================================================================
+# Used exclusively for local sandboxed PostgreSQL development.
+# NOTE: The production environment connects to serverless Neon PostgreSQL.
+# =========================================================================
+
 version: '3.8'
 
 services:
   postgres:
     image: postgres:16-alpine
     container_name: finsight-postgres
+    # Maps local port 5433 to container port 5432 to prevent conflict with 
+    # any host-level database installations running on default 5432.
     ports:
       - "5433:5432"
     environment:

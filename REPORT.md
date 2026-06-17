@@ -18,7 +18,10 @@ AI integration is implemented via the **Groq API** utilizing `llama-3.3-70b-vers
 
 ## Reviewer Evaluation Account
 
-To immediately evaluate all platform capabilities without any configuration, use the pre-seeded demo account:
+* **Frontend Live Application:** [https://finsight-ai-nu.vercel.app](https://finsight-ai-nu.vercel.app)
+* **Backend Swagger API Specs:** [https://finsight-ai-pz69.onrender.com/api/docs](https://finsight-ai-pz69.onrender.com/api/docs)
+
+To immediately evaluate all platform capabilities, sign in using our pre-seeded recruiter credentials:
 
 | Field | Value |
 |:---|:---|
@@ -26,13 +29,14 @@ To immediately evaluate all platform capabilities without any configuration, use
 | **Password** | `Test@123456` |
 
 This account is pre-populated with:
-- 35+ realistic transactions across April, May, and June 2026
-- 5 active budget configurations (Groceries, Dining Out, Transport, Utilities, Entertainment)
-- Full analytics data — monthly summary, category breakdown, and 30-day trend charts
+- **35 realistic transactions (70 total transactions database-wide)** across April, May, and June 2026.
+- **5 budget configurations (10 total budgets database-wide)** (Groceries, Dining Out, Transport, Utilities, Entertainment).
+- **11 core categories** and **3 active user accounts**.
+- Full analytics data — monthly summary, category breakdown, and 30-day trend charts.
 - Groq AI Chat assistant ready for queries (e.g., *"How much did I spend on dining this month?"*)
-- Auto-generated AI Dashboard Summary insights
+- Auto-generated AI Dashboard Summary insights.
 
-The login page also features a **Demo Account panel** with copy buttons and a one-click **"Use Demo Account"** auto-fill button for instant access.
+The login page features a premium **"Explore Demo"** card containing copy buttons and a one-click **"EXPLORE DEMO"** button that automatically fills these credentials and authenticates the reviewer instantly.
 
 ---
 
@@ -233,10 +237,14 @@ The AI service bridges secure financial ledger data and contextual LLM evaluatio
 
 ---
 
-## 12. Deployment & DevOps Readiness
+## 12. Deployment & DevOps Architecture (Production)
 
 * **Twelve-Factor App Compliance:** Configuration is stored in environment variables, log streams are routed to stdout/stderr, and database backups/migrations run as stateless admin tasks.
-* **Railway & Vercel Readiness:** Setup is complete with automated health checks, Dockerfile builds, and build caches, making it ready for one-click production deployments.
+* **Vercel, Render & Neon Deployment:** The platform is deployed live across modern cloud infrastructures:
+  - **Frontend:** Deployed to **Vercel** ([https://finsight-ai-nu.vercel.app](https://finsight-ai-nu.vercel.app)) with automated edge routing and optimized asset caching.
+  - **Backend:** Deployed as a web service on **Render** ([https://finsight-ai-pz69.onrender.com](https://finsight-ai-pz69.onrender.com)) utilizing continuous deployment integration.
+  - **Database:** Hosted on serverless **Neon PostgreSQL** connected via connection-pooled endpoints for optimized response times.
+  - **Groq API Engine:** Interfaced directly for serverless AI analytical logic.
 
 ---
 
