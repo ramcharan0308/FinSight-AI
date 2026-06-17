@@ -94,27 +94,27 @@ export default function LoginPage() {
       </div>
 
       {/* ── Demo Card ──────────────────────────────────────────── */}
-      <div className="relative mb-5 overflow-hidden rounded-2xl border border-[#22D3A6]/20 bg-gradient-to-br from-[#22D3A6]/[0.07] via-transparent to-emerald-500/[0.03] p-5">
+      <div className="relative mb-5 overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/[0.07] via-transparent to-indigo-500/[0.03] p-5">
         {/* Decorative watermark */}
         <div className="pointer-events-none absolute right-4 top-4 opacity-[0.055]">
-          <LayoutDashboard className="h-14 w-14 text-[#22D3A6]" />
+          <LayoutDashboard className="h-14 w-14 text-indigo-500 dark:text-indigo-400" />
         </div>
 
         {/* Header row: icon + label + tags */}
         <div className="mb-3 flex items-start gap-3">
-          <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-xl bg-[#22D3A6]/15 text-[#22D3A6]">
+          <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-650 dark:text-indigo-400">
             <PlayCircle className="h-3.5 w-3.5" />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
-              <span className="text-[11px] font-black uppercase tracking-widest text-[#22D3A6]">
+              <span className="text-[11px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
                 Explore Demo Data
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {['Transactions', 'Budgets', 'Analytics', 'AI Insights', 'AI Chat'].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-[#22D3A6]/20 bg-[#22D3A6]/10 px-2 py-0.5 text-[9.5px] font-semibold text-[#22D3A6]"
+                    className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2 py-0.5 text-[9.5px] font-semibold text-indigo-650 dark:text-indigo-400"
                   >
                     {tag}
                   </span>
@@ -142,8 +142,8 @@ export default function LoginPage() {
               title="Copy email"
               className="flex flex-shrink-0 cursor-pointer items-center gap-1 rounded-lg px-1.5 py-0.5 text-[10px] font-bold transition-all duration-200"
               style={{
-                color: copiedEmail ? '#22D3A6' : '#94a3b8',
-                background: copiedEmail ? 'rgba(34,211,166,0.1)' : 'transparent',
+                color: copiedEmail ? '#4F46E5' : '#94a3b8',
+                background: copiedEmail ? 'rgba(79,70,229,0.1)' : 'transparent',
               }}
             >
               {copiedEmail ? (
@@ -170,8 +170,8 @@ export default function LoginPage() {
               title="Copy password"
               className="flex flex-shrink-0 cursor-pointer items-center gap-1 rounded-lg px-1.5 py-0.5 text-[10px] font-bold transition-all duration-200"
               style={{
-                color: copiedPassword ? '#22D3A6' : '#94a3b8',
-                background: copiedPassword ? 'rgba(34,211,166,0.1)' : 'transparent',
+                color: copiedPassword ? '#4F46E5' : '#94a3b8',
+                background: copiedPassword ? 'rgba(79,70,229,0.1)' : 'transparent',
               }}
             >
               {copiedPassword ? (
@@ -190,7 +190,7 @@ export default function LoginPage() {
           <button
             type="button"
             onClick={handleExplorDemo}
-            className="flex flex-shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-[#22D3A6] to-emerald-400 px-4 py-2.5 text-[10.5px] font-black uppercase tracking-widest text-[#020B2D] shadow-md shadow-[#22D3A6]/15 transition-all duration-200 hover:from-[#1fb896] hover:to-emerald-500 hover:shadow-lg hover:shadow-[#22D3A6]/20 active:scale-[0.97]"
+            className="flex flex-shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-4 py-2.5 text-[10.5px] font-black uppercase tracking-widest text-white shadow-md shadow-indigo-650/15 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-600/20 active:scale-[0.97]"
           >
             <PlayCircle className="h-3.5 w-3.5" />
             Explore Demo
@@ -211,8 +211,8 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         {/* Demo prefilled notice */}
         {demoPrefilled && !errorMessage && (
-          <div className="flex items-start gap-3 rounded-2xl border border-[#22D3A6]/25 bg-[#22D3A6]/[0.07] px-4 py-3 animate-fadeIn">
-            <PlayCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#22D3A6]" />
+          <div className="flex items-start gap-3 rounded-2xl border border-indigo-500/25 bg-indigo-500/[0.07] px-4 py-3 animate-fadeIn">
+            <PlayCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-indigo-600 dark:text-indigo-400" />
             <p className="text-xs font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
               Demo credentials filled in. Click{' '}
               <span className="font-black text-slate-900 dark:text-white">
@@ -254,7 +254,7 @@ export default function LoginPage() {
                 emailRegisterRef(el);
                 (emailInputRef as React.MutableRefObject<HTMLInputElement | null>).current = el;
               }}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:focus:ring-emerald-500/10"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:focus:ring-indigo-500/10"
             />
           </div>
           {errors.email && (
@@ -280,7 +280,7 @@ export default function LoginPage() {
               autoComplete="current-password"
               placeholder="••••••••"
               {...register('password')}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:focus:ring-emerald-500/10"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:focus:ring-indigo-500/10"
             />
           </div>
           {errors.password && (
@@ -292,7 +292,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={isLoggingIn}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-500/10 transition-all duration-200 hover:from-emerald-600 hover:to-teal-600 hover:shadow-lg hover:shadow-emerald-500/15 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-indigo-500/10 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/15 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100"
         >
           {isLoggingIn ? (
             <>
@@ -313,7 +313,7 @@ export default function LoginPage() {
         New to FinSight AI?{' '}
         <Link
           href="/register"
-          className="font-bold text-emerald-500 underline decoration-emerald-500/30 underline-offset-4 transition-colors hover:text-emerald-600 hover:decoration-emerald-500"
+          className="font-bold text-indigo-600 dark:text-indigo-400 underline decoration-indigo-500/30 underline-offset-4 transition-colors hover:text-indigo-750 dark:hover:text-indigo-350 hover:decoration-indigo-500"
         >
           Create an account
         </Link>

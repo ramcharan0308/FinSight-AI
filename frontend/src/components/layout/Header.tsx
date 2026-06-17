@@ -34,8 +34,8 @@ export function Header() {
           <span className="font-semibold text-slate-800 dark:text-white">
             {user?.name || 'Friend'}
           </span>
-          <span className="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 font-semibold border border-emerald-500/20">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+          <span className="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20">
+            <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
             AI Enabled
           </span>
         </div>
@@ -63,7 +63,9 @@ export function Header() {
             </button>
             <div className="hidden lg:flex flex-col text-right">
               <span className="text-xs font-semibold text-slate-400">Default Wallet</span>
-              <span className="text-sm font-bold text-emerald-500">USD Active</span>
+              <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                USD Active
+              </span>
             </div>
           </div>
         </div>

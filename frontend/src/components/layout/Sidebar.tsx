@@ -58,7 +58,7 @@ export function Sidebar() {
   return (
     <>
       <aside
-        className="hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 border-r border-[#0b1747] bg-[#020B2D] select-none z-45 overflow-x-hidden"
+        className="hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 select-none z-45 overflow-x-hidden"
         style={{
           width: mounted ? `${currentWidth}px` : '260px',
           transition: 'width 250ms ease',
@@ -75,7 +75,7 @@ export function Sidebar() {
                     setHoveredRect(null);
                     toggleSidebar();
                   }}
-                  className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-[#22D3A6] to-emerald-400 text-[#020B2D] shadow-md shadow-[#22D3A6]/20 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex-shrink-0"
+                  className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex-shrink-0"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setHoveredRect({
@@ -101,14 +101,14 @@ export function Sidebar() {
                   href="/"
                   className="flex items-center gap-3 min-w-0 overflow-hidden group/brand"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-[#22D3A6] to-emerald-400 text-[#020B2D] shadow-md shadow-[#22D3A6]/20 group-hover/brand:scale-105 transition-all duration-300 flex-shrink-0">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 group-hover/brand:scale-105 transition-all duration-300 flex-shrink-0">
                     <TrendingUp className="w-5.5 h-5.5 stroke-[2.5]" />
                   </div>
                   <div className="animate-fadeIn overflow-hidden whitespace-nowrap min-w-0">
-                    <h1 className="text-base font-black text-white tracking-tight leading-none">
+                    <h1 className="text-base font-black text-slate-800 dark:text-white tracking-tight leading-none">
                       FinSight AI
                     </h1>
-                    <span className="text-[9px] font-extrabold text-[#22D3A6] uppercase tracking-widest mt-1 block">
+                    <span className="text-[9px] font-extrabold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mt-1 block">
                       Wealth Engine
                     </span>
                   </div>
@@ -120,7 +120,7 @@ export function Sidebar() {
                     setHoveredRect(null);
                     toggleSidebar();
                   }}
-                  className="flex items-center justify-center w-10 h-10 rounded-xl text-slate-450 hover:text-slate-200 hover:bg-[#07133a] transition-colors cursor-pointer flex-shrink-0"
+                  className="flex items-center justify-center w-10 h-10 rounded-xl text-slate-500 dark:text-slate-450 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors cursor-pointer flex-shrink-0"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setHoveredRect({
@@ -152,7 +152,7 @@ export function Sidebar() {
             >
               {isSidebarCollapsed ? (
                 <div
-                  className="w-10 h-10 rounded-full bg-emerald-950/40 text-emerald-400 border border-emerald-500/20 flex items-center justify-center font-bold text-sm uppercase cursor-default flex-shrink-0"
+                  className="w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-650 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 flex items-center justify-center font-bold text-sm uppercase cursor-default flex-shrink-0"
                   onMouseEnter={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     setHoveredRect({
@@ -170,16 +170,16 @@ export function Sidebar() {
                   {user.name ? user.name.charAt(0) : user.email.charAt(0)}
                 </div>
               ) : (
-                <div className="flex items-center rounded-2xl bg-[#07133a]/40 border border-[#0b1747] shadow-sm relative group p-3.5 gap-3 overflow-x-hidden min-w-0 w-full">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#22D3A6]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                <div className="flex items-center rounded-2xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 shadow-sm relative group p-3.5 gap-3 overflow-x-hidden min-w-0 w-full">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
 
-                  <div className="w-10 h-10 rounded-full bg-emerald-950/40 text-emerald-400 border border-emerald-500/20 flex items-center justify-center font-bold text-sm uppercase flex-shrink-0 z-10">
+                  <div className="w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-655 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 flex items-center justify-center font-bold text-sm uppercase flex-shrink-0 z-10">
                     {user.name ? user.name.charAt(0) : user.email.charAt(0)}
                   </div>
                   <div className="overflow-hidden min-w-0 animate-fadeIn z-10">
-                    <p className="text-sm font-bold truncate text-slate-200 flex items-center gap-1.5 leading-snug">
+                    <p className="text-sm font-bold truncate text-slate-700 dark:text-slate-200 flex items-center gap-1.5 leading-snug">
                       {user.name || 'User'}
-                      <Sparkles className="w-3.5 h-3.5 text-[#22D3A6] flex-shrink-0 animate-pulse" />
+                      <Sparkles className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400 flex-shrink-0 animate-pulse" />
                     </p>
                     <p className="text-[10px] font-semibold text-slate-500 truncate leading-none mt-1">
                       {user.email}
@@ -207,8 +207,8 @@ export function Sidebar() {
                     'group flex items-center text-xs font-bold rounded-xl transition-all duration-200 uppercase tracking-wider relative min-w-0 overflow-hidden cursor-pointer',
                     isSidebarCollapsed ? 'justify-center p-3' : 'px-4 py-3',
                     isActive
-                      ? 'bg-[#0f1b4c]/80 text-[#22D3A6] border-l-2 border-[#22D3A6] shadow-sm'
-                      : 'text-slate-400 hover:bg-[#07133a]/50 hover:text-slate-100',
+                      ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border-l-2 border-indigo-600 dark:border-indigo-400 shadow-sm'
+                      : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/50 hover:text-slate-850 dark:hover:text-slate-100',
                   )}
                   onMouseEnter={(e) => {
                     if (isSidebarCollapsed) {
@@ -230,7 +230,9 @@ export function Sidebar() {
                     className={cn(
                       'h-4.5 w-4.5 flex-shrink-0 transition-transform duration-200 group-hover:scale-105',
                       !isSidebarCollapsed && 'mr-3.5',
-                      isActive ? 'text-[#22D3A6]' : 'text-slate-400 group-hover:text-slate-300',
+                      isActive
+                        ? 'text-indigo-600 dark:text-indigo-400'
+                        : 'text-slate-400 group-hover:text-slate-650 dark:group-hover:text-slate-300',
                     )}
                   />
                   {!isSidebarCollapsed && (
@@ -245,7 +247,7 @@ export function Sidebar() {
         {/* Logout row container */}
         <div
           className={cn(
-            'flex-shrink-0 flex border-t border-[#0b1747] bg-[#07133a]/20 transition-all overflow-x-hidden',
+            'flex-shrink-0 flex border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20 transition-all overflow-x-hidden',
             isSidebarCollapsed ? 'p-2 justify-center' : 'p-4',
           )}
         >

@@ -76,14 +76,14 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* Drawer header with brand + close button */}
         <div className="flex items-center justify-between px-5 pt-5 pb-3 flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white shadow-md shadow-emerald-500/20 flex-shrink-0">
+            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-md shadow-indigo-500/20 flex-shrink-0">
               <TrendingUp className="w-5 h-5 stroke-[2.2]" />
             </div>
             <div>
               <h1 className="text-lg font-black bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent tracking-tight leading-none">
                 FinSight AI
               </h1>
-              <span className="text-[9px] font-extrabold text-emerald-500 uppercase tracking-widest mt-0.5 block">
+              <span className="text-[9px] font-extrabold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mt-0.5 block">
                 Wealth Engine
               </span>
             </div>
@@ -102,13 +102,13 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {user && (
           <div className="px-4 py-3 flex-shrink-0">
             <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-50/80 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 border border-emerald-500/10 flex items-center justify-center font-black text-sm uppercase tracking-wide flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 border border-indigo-500/10 flex items-center justify-center font-black text-sm uppercase tracking-wide flex-shrink-0">
                 {user.name ? user.name.charAt(0) : user.email.charAt(0)}
               </div>
               <div className="overflow-hidden min-w-0">
                 <p className="text-sm font-bold truncate text-slate-800 dark:text-white flex items-center gap-1.5 leading-snug">
                   {user.name || 'User'}
-                  <Sparkles className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0" />
                 </p>
                 <p className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 truncate leading-none mt-0.5">
                   {user.email}
@@ -130,7 +130,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 className={cn(
                   'group flex items-center px-4 py-3.5 text-sm font-semibold rounded-xl transition-all duration-200',
                   isActive
-                    ? 'bg-gradient-to-r from-emerald-500/10 to-teal-500/5 text-emerald-600 dark:text-emerald-400 border-l-4 border-emerald-500'
+                    ? 'bg-gradient-to-r from-indigo-500/10 to-indigo-500/5 text-indigo-650 dark:text-indigo-450 border-l-4 border-indigo-600'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/40 hover:text-slate-800 dark:hover:text-white',
                 )}
               >
@@ -138,7 +138,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   className={cn(
                     'mr-3 h-5 w-5 flex-shrink-0',
                     isActive
-                      ? 'text-emerald-500'
+                      ? 'text-indigo-500'
                       : 'text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300',
                   )}
                 />

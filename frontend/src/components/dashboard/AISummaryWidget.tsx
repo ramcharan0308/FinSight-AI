@@ -25,13 +25,13 @@ export function AISummaryWidget() {
   };
 
   return (
-    <div className="p-6 rounded-3xl border border-emerald-500/25 dark:border-emerald-500/20 bg-gradient-to-br from-emerald-500/[0.03] to-teal-500/[0.03] dark:from-emerald-950/5 dark:to-teal-950/5 relative overflow-hidden select-none">
+    <div className="p-6 rounded-3xl border border-indigo-500/25 dark:border-indigo-500/20 bg-gradient-to-br from-indigo-500/[0.03] to-indigo-600/[0.03] dark:from-indigo-950/5 dark:to-indigo-950/5 relative overflow-hidden select-none">
       {/* Background ambient glow */}
-      <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-emerald-500/5 blur-3xl pointer-events-none" />
+      <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-sm animate-pulse">
+          <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 shadow-sm animate-pulse">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
@@ -47,7 +47,7 @@ export function AISummaryWidget() {
         {!isGeneratingSummary && (
           <button
             onClick={handleFetchSummary}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-xs font-bold transition-all shadow-md shadow-emerald-500/10 hover:shadow-emerald-500/15"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 text-white text-xs font-bold transition-all shadow-md shadow-indigo-650/10 hover:shadow-indigo-600/15"
           >
             {summary ? (
               <>
@@ -65,8 +65,8 @@ export function AISummaryWidget() {
       {isGeneratingSummary && (
         <div className="flex flex-col items-center justify-center py-10 text-center gap-3">
           <div className="relative">
-            <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
-            <Sparkles className="w-4 h-4 text-teal-400 absolute inset-0 m-auto animate-pulse" />
+            <Loader2 className="w-8 h-8 text-indigo-650 dark:text-indigo-400 animate-spin" />
+            <Sparkles className="w-4 h-4 text-indigo-400 absolute inset-0 m-auto animate-pulse" />
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 font-bold tracking-wide">
             AI Advisor is scanning ledger streams and evaluating budget limits...
@@ -92,7 +92,7 @@ export function AISummaryWidget() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Comparative indicators */}
             <div className="p-4 rounded-2xl bg-slate-50/50 dark:bg-slate-900/40 border border-slate-150 dark:border-slate-800/50 flex items-start gap-3 text-xs">
-              <BarChart3 className="w-4.5 h-4.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+              <BarChart3 className="w-4.5 h-4.5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-slate-900 dark:text-white block mb-1">
                   Cashflow Insights
@@ -105,7 +105,7 @@ export function AISummaryWidget() {
 
             {/* Recommendations segment */}
             <div className="p-4 rounded-2xl bg-slate-50/50 dark:bg-slate-900/40 border border-slate-150 dark:border-slate-800/50 flex items-start gap-3 text-xs">
-              <Lightbulb className="w-4.5 h-4.5 text-teal-500 flex-shrink-0 mt-0.5" />
+              <Lightbulb className="w-4.5 h-4.5 text-indigo-650 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-slate-900 dark:text-white block mb-1">
                   Savings Advisors

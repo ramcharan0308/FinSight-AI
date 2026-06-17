@@ -50,7 +50,7 @@ export default function ChatPage() {
       {/* Dynamic cockpit header */}
       <div className="p-5 border-b border-slate-200/50 dark:border-slate-800/50 bg-slate-50/35 dark:bg-slate-950/20 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <div className="w-8.5 h-8.5 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center border border-emerald-500/15">
+          <div className="w-8.5 h-8.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-500/15">
             <Terminal className="w-4.5 h-4.5" />
           </div>
           <div>
@@ -64,8 +64,8 @@ export default function ChatPage() {
         </div>
 
         {/* Live system state indicator */}
-        <span className="text-[9px] font-black text-emerald-500 bg-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 border border-emerald-500/20 animate-pulse">
-          <Sparkles className="w-3 h-3 text-emerald-500" /> AI Consultant Online
+        <span className="text-[9px] font-black text-indigo-650 dark:text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 border border-indigo-500/20 animate-pulse">
+          <Sparkles className="w-3 h-3 text-indigo-500" /> AI Consultant Online
         </span>
       </div>
 

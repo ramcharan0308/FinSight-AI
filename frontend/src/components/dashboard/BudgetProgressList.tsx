@@ -29,7 +29,7 @@ export function BudgetProgressList({ statuses }: BudgetProgressListProps) {
         </div>
         <Link
           href="/budgets"
-          className="text-xs font-bold text-emerald-500 hover:text-emerald-600 flex items-center gap-0.5 hover:underline decoration-emerald-500/30 underline-offset-4"
+          className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-750 dark:hover:text-indigo-350 flex items-center gap-0.5 hover:underline decoration-indigo-500/30 underline-offset-4"
         >
           Manage <ArrowUpRight className="w-3.5 h-3.5" />
         </Link>

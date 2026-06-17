@@ -20,7 +20,7 @@ export function SuggestedQuestions({ questions, onClick }: SuggestedQuestionsPro
           <button
             key={idx}
             onClick={() => onClick(q)}
-            className="px-3.5 py-2 rounded-xl border border-slate-200/60 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-emerald-500/[0.03] text-xs text-slate-600 dark:text-slate-450 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold text-left shadow-sm active:scale-[0.98] transition-all duration-200"
+            className="px-3.5 py-2 rounded-xl border border-slate-200/60 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm hover:border-indigo-500/30 hover:bg-indigo-500/[0.03] text-xs text-slate-600 dark:text-slate-450 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold text-left shadow-sm active:scale-[0.98] transition-all duration-200"
           >
             {q}
           </button>

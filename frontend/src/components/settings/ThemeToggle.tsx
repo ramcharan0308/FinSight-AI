@@ -42,8 +42,8 @@ export function ThemeToggle() {
       label: 'Dark Mode',
       description: 'Elegant dark layout that is comfortable for your eyes.',
       icon: Moon,
-      color: 'text-emerald-400 bg-emerald-950/20 border-emerald-900/20',
-      activeColor: 'ring-emerald-500 border-emerald-500 dark:border-emerald-500',
+      color: 'text-indigo-400 bg-indigo-950/20 border-indigo-900/20',
+      activeColor: 'ring-indigo-500 border-indigo-500 dark:border-indigo-500',
     },
     {
       value: 'system',
@@ -70,7 +70,7 @@ export function ThemeToggle() {
             className={cn(
               'group relative flex flex-col justify-between text-left p-5 rounded-2xl border bg-white dark:bg-slate-900 transition-all duration-300 outline-none',
               isActive
-                ? 'border-emerald-500 ring-2 ring-emerald-500/20 dark:ring-emerald-400/10 shadow-lg shadow-emerald-500/5'
+                ? 'border-indigo-500 ring-2 ring-indigo-500/20 dark:ring-indigo-400/10 shadow-lg shadow-indigo-500/5'
                 : 'border-slate-200 dark:border-slate-800 hover:border-slate-350 dark:hover:border-slate-700 hover:shadow-md hover:-translate-y-0.5',
             )}
           >
@@ -85,7 +85,7 @@ export function ThemeToggle() {
               </div>
 
               {isActive && (
-                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 text-white shadow-md shadow-emerald-500/20 animate-scaleIn">
+                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-indigo-600 text-white shadow-md shadow-indigo-650/20 animate-scaleIn">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
               )}

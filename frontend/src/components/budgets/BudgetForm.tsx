@@ -78,7 +78,7 @@ export function BudgetForm({ initialData, onSubmit, onCancel, isSubmitting }: Bu
         <select
           id="categoryId"
           {...register('categoryId')}
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
         >
           <option value="">Select Category</option>
           {categories.map((c) => (
@@ -108,7 +108,7 @@ export function BudgetForm({ initialData, onSubmit, onCancel, isSubmitting }: Bu
           step="0.01"
           placeholder="500.00"
           {...register('amount')}
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
         />
         {errors.amount && (
           <p className="mt-1 text-[10px] font-semibold text-rose-500">{errors.amount.message}</p>
@@ -128,7 +128,7 @@ export function BudgetForm({ initialData, onSubmit, onCancel, isSubmitting }: Bu
             id="startDate"
             type="date"
             {...register('startDate')}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
           />
           {errors.startDate && (
             <p className="mt-1 text-[10px] font-semibold text-rose-500">
@@ -148,7 +148,7 @@ export function BudgetForm({ initialData, onSubmit, onCancel, isSubmitting }: Bu
             id="endDate"
             type="date"
             {...register('endDate')}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
           />
           {errors.endDate && (
             <p className="mt-1 text-[10px] font-semibold text-rose-500">{errors.endDate.message}</p>
@@ -168,7 +168,7 @@ export function BudgetForm({ initialData, onSubmit, onCancel, isSubmitting }: Bu
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-650 rounded-xl transition-all shadow-md shadow-emerald-500/10 disabled:opacity-50"
+          className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-md shadow-indigo-650/10 disabled:opacity-50"
         >
           {isSubmitting && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
           {initialData ? 'Update Limit' : 'Set Limit'}

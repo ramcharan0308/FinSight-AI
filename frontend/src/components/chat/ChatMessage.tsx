@@ -23,7 +23,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
           'flex items-center justify-center w-8.5 h-8.5 rounded-full flex-shrink-0 border shadow-sm transition-transform duration-300 hover:scale-105',
           isUser
             ? 'bg-slate-900 border-slate-900 dark:bg-white dark:border-white text-white dark:text-slate-900'
-            : 'bg-emerald-500/10 border-emerald-500/25 dark:border-emerald-500/20 text-emerald-500 animate-pulse',
+            : 'bg-indigo-500/10 border-indigo-500/25 dark:border-indigo-500/20 text-indigo-650 dark:text-indigo-400 animate-pulse',
         )}
       >
         {isUser ? <User className="w-4 h-4" /> : <Sparkles className="w-4 h-4" />}

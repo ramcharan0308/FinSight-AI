@@ -12,7 +12,7 @@ export function TransactionFilters() {
   return (
     <div className="p-5 rounded-2xl border border-slate-200/65 dark:border-slate-800/80 bg-white dark:bg-slate-900 shadow-sm space-y-4 select-none">
       <div className="flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-850/60">
-        <Filter className="w-4 h-4 text-emerald-500" />
+        <Filter className="w-4 h-4 text-indigo-500" />
         <span className="text-xs font-bold text-slate-850 dark:text-slate-200 uppercase tracking-wider">
           Filter Ledger Records
         </span>
@@ -30,7 +30,7 @@ export function TransactionFilters() {
               placeholder="Uber ride, utilities..."
               value={filters.search || ''}
               onChange={(e) => setFilter('search', e.target.value)}
-              className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-medium"
+              className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-medium"
             />
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
           </div>
@@ -44,7 +44,7 @@ export function TransactionFilters() {
           <select
             value={filters.category || ''}
             onChange={(e) => setFilter('category', e.target.value)}
-            className="w-full px-3 py-2.5 mt-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-semibold"
+            className="w-full px-3 py-2.5 mt-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-semibold"
           >
             <option value="">All Categories</option>
             {categories.map((c) => (
@@ -63,7 +63,7 @@ export function TransactionFilters() {
           <select
             value={filters.type || ''}
             onChange={(e) => setFilter('type', e.target.value as 'INCOME' | 'EXPENSE' | '')}
-            className="w-full px-3 py-2.5 mt-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-semibold"
+            className="w-full px-3 py-2.5 mt-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-semibold"
           >
             <option value="">All Flows</option>
             <option value="INCOME">Income (+)</option>
@@ -81,7 +81,7 @@ export function TransactionFilters() {
               type="date"
               value={filters.dateFrom || ''}
               onChange={(e) => setFilter('dateFrom', e.target.value)}
-              className="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-semibold"
+              className="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-semibold"
             />
           </div>
         </div>
@@ -96,7 +96,7 @@ export function TransactionFilters() {
               type="date"
               value={filters.dateTo || ''}
               onChange={(e) => setFilter('dateTo', e.target.value)}
-              className="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-semibold"
+              className="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-semibold"
             />
             <button
               onClick={resetFilters}

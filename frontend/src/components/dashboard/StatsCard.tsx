@@ -37,8 +37,8 @@ export function StatsCard({ title, value, type, change }: StatsCardProps) {
         return {
           icon: Wallet,
           colorClass:
-            'text-teal-500 bg-teal-500/10 dark:bg-teal-500/15 border-teal-500/10 dark:border-teal-400/10',
-          badgeClass: 'text-teal-600 bg-teal-50 dark:bg-teal-950/30 dark:text-teal-400',
+            'text-indigo-650 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-500/15 border-indigo-500/10 dark:border-indigo-400/10',
+          badgeClass: 'text-indigo-700 bg-indigo-50 dark:bg-indigo-950/30 dark:text-indigo-400',
         };
     }
   };

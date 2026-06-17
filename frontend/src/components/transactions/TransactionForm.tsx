@@ -81,7 +81,7 @@ export function TransactionForm({
               key={t}
               className={`flex items-center justify-center p-3 rounded-xl border text-xs font-bold cursor-pointer transition-all ${
                 typeValue === t || (!initialData && t === 'EXPENSE')
-                  ? 'border-emerald-500 bg-emerald-500/10 text-emerald-600'
+                  ? 'border-indigo-500 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400'
                   : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
               }`}
             >
@@ -107,7 +107,7 @@ export function TransactionForm({
             step="0.01"
             placeholder="0.00"
             {...register('amount')}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
           />
           {errors.amount && (
             <p className="mt-1 text-[10px] font-semibold text-rose-500">{errors.amount.message}</p>
@@ -125,7 +125,7 @@ export function TransactionForm({
             id="date"
             type="date"
             {...register('date')}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
           />
           {errors.date && (
             <p className="mt-1 text-[10px] font-semibold text-rose-500">{errors.date.message}</p>
@@ -144,7 +144,7 @@ export function TransactionForm({
         <select
           id="categoryId"
           {...register('categoryId')}
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
         >
           <option value="">Select Category</option>
           {categories.map((c) => (
@@ -173,7 +173,7 @@ export function TransactionForm({
           type="text"
           placeholder="Uber ride, electricity bill..."
           {...register('description')}
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs"
         />
         {errors.description && (
           <p className="mt-1 text-[10px] font-semibold text-rose-500 font-medium">
@@ -194,7 +194,7 @@ export function TransactionForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-650 rounded-xl transition-all shadow-md shadow-emerald-500/10 disabled:opacity-50"
+          className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-md shadow-indigo-650/10 disabled:opacity-50"
         >
           {isSubmitting && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
           {initialData ? 'Update Ledger' : 'Create Ledger'}

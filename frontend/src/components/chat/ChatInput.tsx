@@ -30,7 +30,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           disabled={disabled}
-          className="w-full pl-10 pr-4 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-xs font-semibold"
+          className="w-full pl-10 pr-4 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-xs font-semibold"
         />
         <div className="absolute inset-y-0 left-3.5 flex items-center pointer-events-none text-slate-400 dark:text-slate-500">
           <Sparkles className="w-4 h-4" />
@@ -43,7 +43,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
         className={cn(
           'flex items-center justify-center px-4 rounded-2xl text-white transition-all shadow-md',
           text.trim() && !disabled
-            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-650 shadow-emerald-500/10 active:scale-[0.98]'
+            ? 'bg-gradient-to-r from-indigo-650 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 shadow-indigo-650/10 active:scale-[0.98]'
             : 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-600 shadow-none cursor-not-allowed',
         )}
       >

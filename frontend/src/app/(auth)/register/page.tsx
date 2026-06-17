@@ -80,7 +80,7 @@ export default function RegisterPage() {
                 type="text"
                 placeholder="John Doe"
                 {...register('name')}
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 dark:focus:ring-emerald-500/10 transition-all text-sm font-medium"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 dark:focus:ring-indigo-500/10 transition-all text-sm font-medium"
               />
             </div>
             {errors.name && (
@@ -105,7 +105,7 @@ export default function RegisterPage() {
                 type="email"
                 placeholder="name@company.com"
                 {...register('email')}
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 dark:focus:ring-emerald-500/10 transition-all text-sm font-medium"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 dark:focus:ring-indigo-500/10 transition-all text-sm font-medium"
               />
             </div>
             {errors.email && (
@@ -130,7 +130,7 @@ export default function RegisterPage() {
                 type="password"
                 placeholder="Minimum 8 characters"
                 {...register('password')}
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 dark:focus:ring-emerald-500/10 transition-all text-sm font-medium"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 dark:focus:ring-indigo-500/10 transition-all text-sm font-medium"
               />
             </div>
             {errors.password && (
@@ -143,7 +143,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={isRegistering}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 active:scale-[0.99] text-white font-bold text-sm shadow-md shadow-emerald-500/10 hover:shadow-lg hover:shadow-emerald-500/15 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-indigo-650 to-indigo-500 bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-indigo-500/10 transition-all duration-200 hover:from-indigo-700 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/15 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
             >
               {isRegistering ? (
                 <>
@@ -164,7 +164,7 @@ export default function RegisterPage() {
           Already registered?{' '}
           <Link
             href="/login"
-            className="text-emerald-500 hover:text-emerald-600 transition-colors font-bold underline underline-offset-4 decoration-emerald-500/30 hover:decoration-emerald-500"
+            className="text-indigo-650 dark:text-indigo-400 hover:text-indigo-750 dark:hover:text-indigo-350 transition-colors font-bold underline underline-offset-4 decoration-indigo-500/30 hover:decoration-indigo-500"
           >
             Sign in here
           </Link>

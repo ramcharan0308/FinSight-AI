@@ -83,7 +83,7 @@ export default function TransactionsPage() {
             <CSVExportButton transactions={transactions} />
             <button
               onClick={handleCreateClick}
-              className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 rounded-xl transition-all shadow-md shadow-emerald-500/10"
+              className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-md shadow-indigo-650/10"
             >
               <Plus className="w-4 h-4" />
               Add Transaction
