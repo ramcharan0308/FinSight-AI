@@ -407,6 +407,31 @@ The application is fully configured for cloud deployment with continuous integra
 
 ---
 
+## Application Screenshots
+
+### Login Experience
+![Login Experience](docs/screenshots/login-page.png)
+
+### Financial Dashboard
+![Financial Dashboard](docs/screenshots/dashboard-overview.png)
+
+### Transactions Management
+![Transactions Management](docs/screenshots/transactions-page.png)
+
+### Budget Planning
+![Budget Planning](docs/screenshots/budgets-page.png)
+
+### AI Financial Advisor
+![AI Financial Advisor](docs/screenshots/ai-advisor-page.png)
+
+### Light Theme
+![Light Theme](docs/screenshots/dashboard-light-theme.png)
+
+### Dark Theme
+![Dark Theme](docs/screenshots/dashboard-dark-theme.png)
+
+---
+
 ## 9. Contributing & License
 
 ### Contributing
